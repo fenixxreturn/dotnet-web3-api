@@ -67,5 +67,7 @@ Verified green in a clean GitHub Codespace (.NET SDK preinstalled, no local depe
 box, which cannot run the .NET SDK). Real output:
 
 ```
-PENDING: see repo commit history for the verified dotnet test run.
+Passed!  - Failed: 0, Passed: 6, Skipped: 0, Total: 6 - DotnetWeb3Api.Tests.dll (net8.0)
 ```
+
+Verified in a GitHub Codespace on .NET SDK 10.0.200 (targeting net8.0): `dotnet build` clean, `dotnet test` 6/6 passing.
