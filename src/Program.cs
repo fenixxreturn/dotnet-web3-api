@@ -22,6 +22,9 @@ builder.Services
     .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
+        // Keep the raw "sub" claim instead of remapping it to ClaimTypes.NameIdentifier,
+        // so /me can read JwtRegisteredClaimNames.Sub directly.
+        options.MapInboundClaims = false;
         options.TokenValidationParameters = new TokenValidationParameters
         {
             ValidateIssuer = true,
